@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/data_getter.rb"
+
+puts DataGetter.new("thoughtworks").person
