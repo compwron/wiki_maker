@@ -1,0 +1,1 @@
+Idea: given a list of people (influential women), could a tiny app be made that googles them and builds the framework of a wikipedia article (that a human would of course then check over for factuality and upload)
