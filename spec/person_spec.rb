@@ -9,6 +9,6 @@ describe Person do
   end
 
   it "should detect born date" do
-  	subject.born.should == "3 July 1971"
+  	subject.find_born(sample_data).should == "3 July 1971"
   end
 end
