@@ -1,5 +1,22 @@
 #!/usr/bin/env ruby
 
 require_relative "../lib/data_getter.rb"
+require_relative "../lib/wiki_person.rb"
 
-puts DataGetter.new("thoughtworks").person
+require 'trollop'
+require 'yaml'
+
+opts = Trollop::options do
+  opt :config, "location of config file, example: ../../config/names.yml", :default => "config/names.yml"
+end
+
+def run_command opts
+	names = YAML.load_file(opts[:config])
+	puts names
+	names.map {|name|
+  		WikiPerson.new(DataGetter.new(name).person)
+	}
+end
+
+puts run_command(opts).join("\n")
+

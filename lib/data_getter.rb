@@ -1,5 +1,6 @@
 class DataGetter
 	require 'json'
+	require_relative "person"
 	# this is intended to be the layer that somehow googles a passed-n name and creates a Person object
 	def initialize(name)
 		# must put + between space-separated items
@@ -7,5 +8,6 @@ class DataGetter
 	end
 
 	def person
+		Person.new(@sample_data)
 	end
 end
