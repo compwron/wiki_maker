@@ -7,6 +7,6 @@ describe WikiPerson do
   	subject { WikiPerson.new person}
 
   it "should print markup with date" do
-  	 subject.to_s.should include "Birth date|1971|06|03|"
+  	 subject.to_s.should include "Birth date|1971|7|3|"
   end
 end
