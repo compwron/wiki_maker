@@ -22,3 +22,6 @@ end
 def make_filename(name)
 	name.strip.split(" ").join("_") + ".txt"
 end
+
+run_command(opts)
+
