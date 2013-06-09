@@ -12,7 +12,6 @@ end
 
 def run_command opts
 	names = YAML.load_file(opts[:config])
-	puts names
 	names["names"].split(",").map {|name|
 		markup = WikiPerson.new(DataGetter.new(name.strip).person)
 		File.open("output/" + make_filename(name), 'w') {|f| f.write(markup) }

@@ -9,7 +9,6 @@ class DataGetter
 		api_url = "https://api.duckduckgo.com/?q=#{concatenated_name}&format=json"
 		# api_url = "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q="
 		@sample_data = JSON.parse(`curl --silent "#{api_url}"`)
-		puts @sample_data
 	end
 
 	def concatenate_name(name)

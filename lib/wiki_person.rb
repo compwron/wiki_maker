@@ -4,11 +4,17 @@ class WikiPerson
 	end
 
 	def create_text(person) # need to parse bith date in order to put it in this format. 
-		"{{Infobox person
-		 | name = #{person.name}
-		 | birth_date = {{Birth date|#{person.born.year}|#{person.born.month}|#{person.born.day}|df=yes}}
-		 | nationality = #{person.nationality}
-  		 }}"
+		markup = "{{Infobox person
+		 | name = #{person.name}"
+		 if (!person.born.nil?) then 
+		 	markup += "\n| birth_date = {{Birth date|#{person.born.year}|#{person.born.month}|#{person.born.day}|df=yes}}"
+		 end
+
+		 if (!person.nationality.nil?) then
+		 	markup += "\n| nationality = #{person.nationality}"
+		 end
+
+		 markup += "}}"
 	end
 
 	def to_s
