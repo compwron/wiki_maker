@@ -15,7 +15,7 @@ def run_command opts
 	puts names
 	names["names"].split(",").map {|name|
 		markup = WikiPerson.new(DataGetter.new(name.strip).person)
-		File.open(make_filename(name), 'w') {|f| f.write(markup) }
+		File.open("output/" + make_filename(name), 'w') {|f| f.write(markup) }
 	}
 end
 
