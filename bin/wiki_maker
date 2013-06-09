@@ -13,8 +13,8 @@ end
 def run_command opts
 	names = YAML.load_file(opts[:config])
 	puts names
-	names.map {|name|
-  		WikiPerson.new(DataGetter.new(name).person)
+	names["names"].split(",").map {|name|
+  		WikiPerson.new(DataGetter.new(name.strip).person)
 	}
 end
 
