@@ -11,4 +11,8 @@ describe Person do
   it "should detect born date" do
   	subject.find_born(sample_data).should == "3 July 1971"
   end
+
+  it "should guess nationality" do
+  	subject.find_nationality(sample_data).should == "Australia"
+  end
 end
