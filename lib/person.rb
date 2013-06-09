@@ -25,10 +25,11 @@ class Person
 	end
 
 	def find_born(text)
-		/born.*(\d\s.*\d\d\d\d)/.match(text)[1]
+		match = /born.*(\d\s.*\d\d\d\d)/.match(text)
+		match.nil? ? nil : match[1]
 	end
 
 	def find_date(text_date)
-		Date.parse(text_date)
+		text_date.nil? ? nil : Date.parse(text_date)
 	end
 end
