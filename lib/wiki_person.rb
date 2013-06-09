@@ -7,6 +7,7 @@ class WikiPerson
 		"{{Infobox person
 		 | name = #{person.name}
 		 | birth_date = {{Birth date|#{person.born.year}|#{person.born.month}|#{person.born.day}|df=yes}}
+		 | nationality = #{person.nationality}
   		 }}"
 	end
 

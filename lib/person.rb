@@ -1,6 +1,6 @@
 class Person
 	require 'date'
-	attr_accessor :name, :born
+	attr_accessor :name, :born, :nationality
 	def initialize(name, json_data)
 		@name = name
 		useful_text = json_data["AbstractText"]
