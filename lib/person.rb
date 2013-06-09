@@ -1,5 +1,7 @@
 class Person
 	require 'date'
+	require 'countries'
+
 	attr_accessor :name, :born, :nationality
 	def initialize(name, json_data)
 		@name = name
@@ -14,9 +16,10 @@ class Person
 	end
 
 	def find_nationality(text)
-		countries = ["Australia", "Canada"] #is there a ruby gem which proveis a long list of all country names? 
+		countries = Country.countries #is there a ruby gem which proveis a long list of all country names? 
 		countries.each {|country|
-			if /#{country}/.match(text) then return country end
+			country_name = country.first
+			if /#{country_name}/.match(text) then return country_name end
 		}
 		nil
 	end
