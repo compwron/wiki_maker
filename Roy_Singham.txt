@@ -1,3 +1,0 @@
-{{Infobox person
-		 | name = Roy Singham
-  		 }}

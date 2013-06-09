@@ -1,3 +1,0 @@
-{{Infobox person
-		 | name = Julian Assange
-  		 }}
