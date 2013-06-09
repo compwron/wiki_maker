@@ -1,1 +1,5 @@
 Idea: given a list of people (influential women), could a tiny app be made that googles them and builds the framework of a wikipedia article (that a human would of course then check over for factuality and upload)
+
+Hey guys so this might be crazy-misguided but with my out of date ruby knowledge (inspired by Roy's mention of making wiki pages for women activists in his #2013naad away day talk) I built the very beginnings of something that will google a name and generate a page in wiki markup using what it finds (which of course a human should really really check for factual accuracy and typos before attempting to upload to wikipedia) partially because I've always wanted to contribute to wikipedia and never really done it. 
+
+I am sure there is a better way to do this but I don't know what it is yet... so tell me! 
